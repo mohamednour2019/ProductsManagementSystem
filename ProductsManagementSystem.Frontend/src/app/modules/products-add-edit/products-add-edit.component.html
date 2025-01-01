@@ -1,0 +1,57 @@
+<div class="form-container">
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <button pButton type="button" icon="pi pi-arrow-left" label="Back" (click)="goBack()"></button>
+    </div>
+
+    @if (isEditMode) {
+    <h2>Edit Product {{this.productId}}</h2>
+    }
+    @else {
+    <h2>Create Product</h2>
+    }
+
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" type="text" pInputText formControlName="name" class="input"
+                placeholder="Enter product name" />
+            <div class="error" *ngIf="productForm.controls['name'].invalid && productForm.controls['name'].touched">
+                <div *ngIf="productForm.controls['name'].hasError('required')">Name is required.</div>
+                <div *ngIf="productForm.controls['name'].hasError('maxlength')">Max length is 100 characters.</div>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label for="description">Description</label>
+            <textarea id="description" formControlName="description" class="textarea"
+                placeholder="Enter product description" rows="5"></textarea>
+            <div class="error"
+                *ngIf="productForm.controls['description'].invalid && productForm.controls['description'].touched">
+                <div *ngIf="productForm.controls['description'].hasError('required')">Description is required.</div>
+                <div *ngIf="productForm.controls['description'].hasError('maxlength')">Max length is 500 characters.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label for="price">Price</label>
+            <input id="price" type="number" pInputText formControlName="price" class="input"
+                placeholder="Enter product price" />
+            <div class="error" *ngIf="productForm.controls['price'].invalid && productForm.controls['price'].touched">
+                <div *ngIf="productForm.controls['price'].hasError('required')">Price is required.</div>
+                <div *ngIf="productForm.controls['price'].hasError('min')">Price must be a positive number.</div>
+            </div>
+        </div>
+
+        <div class="form-field">
+            @if(isEditMode){
+            <button pButton type="submit" [disabled]="productForm.invalid">{{"Edit"}}</button>
+            }
+            @else {
+            <button pButton type="submit" [disabled]="productForm.invalid">{{"Add"}}</button>
+            }
+
+        </div>
+    </form>
+</div>

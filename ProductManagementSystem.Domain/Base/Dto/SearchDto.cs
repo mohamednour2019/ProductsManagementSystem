@@ -9,7 +9,7 @@ namespace ProductManagementSystem.Domain.Base.Dto
     public class SearchDto<T>
     {
         public T Filter { get; set; }
-        public SortedDto Sorting {  get; set; }
+        public SortedDto Sorting { get; set; } = new SortedDto();
         public PaginatorDto Paginator { get; set; }
 
         

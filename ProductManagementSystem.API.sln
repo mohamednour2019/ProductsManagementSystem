@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManagementSystem.API", "ProductManagementSystem.API\ProductManagementSystem.API.csproj", "{E636F840-C9D8-4873-A16F-F9B73F8F69BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManagementSystem.API", "ProductManagementSystem.API\ProductManagementSystem.API.csproj", "{E636F840-C9D8-4873-A16F-F9B73F8F69BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManagementSystem.AppService", "ProductManagementSystem.AppService\ProductManagementSystem.AppService.csproj", "{71F19311-8978-4EEB-A989-32342DA795D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManagementSystem.AppService", "ProductManagementSystem.AppService\ProductManagementSystem.AppService.csproj", "{71F19311-8978-4EEB-A989-32342DA795D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManagementSystem.Domain", "ProductManagementSystem.Domain\ProductManagementSystem.Domain.csproj", "{75E43A61-FF12-4C37-84AD-BD124E79ACDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManagementSystem.Domain", "ProductManagementSystem.Domain\ProductManagementSystem.Domain.csproj", "{75E43A61-FF12-4C37-84AD-BD124E79ACDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManagementSystem.InfraStructure", "ProductManagementSystem.InfraStructure\ProductManagementSystem.InfraStructure.csproj", "{1C55A695-2DE6-4631-89B3-7D2DEDB0F5DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductManagementSystem.InfraStructure", "ProductManagementSystem.InfraStructure\ProductManagementSystem.InfraStructure.csproj", "{1C55A695-2DE6-4631-89B3-7D2DEDB0F5DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{D3C49497-B79C-4518-8BCF-3C89B8C04AE3}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ProductsManagementSystem.Frontend", "ProductsManagementSystem\ProductsManagementSystem.Frontend.esproj", "{B88C9EC2-CEEE-4831-BBB0-E918E26BFDEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,12 @@ Global
 		{1C55A695-2DE6-4631-89B3-7D2DEDB0F5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C55A695-2DE6-4631-89B3-7D2DEDB0F5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C55A695-2DE6-4631-89B3-7D2DEDB0F5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B88C9EC2-CEEE-4831-BBB0-E918E26BFDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B88C9EC2-CEEE-4831-BBB0-E918E26BFDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B88C9EC2-CEEE-4831-BBB0-E918E26BFDEF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B88C9EC2-CEEE-4831-BBB0-E918E26BFDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B88C9EC2-CEEE-4831-BBB0-E918E26BFDEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B88C9EC2-CEEE-4831-BBB0-E918E26BFDEF}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

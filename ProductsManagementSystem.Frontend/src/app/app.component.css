@@ -1,0 +1,89 @@
+/* Main container to take full height */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background for better contrast */
+  }
+  
+  /* Header styles */
+  .app-header {
+    background-color: #1f1f1f; /* Darker background for header */
+    color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between title and actions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    border-bottom: 2px solid #333; /* Bottom border to separate header from content */
+  }
+  
+  /* Header title with enhanced typography */
+  .header-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #ff9800; /* Accent color to make the title pop */
+  }
+  
+  /* Styling for add button placed in the header (for future scalability) */
+  .app-header .add-button {
+    background-color: #ff9800;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .app-header .add-button:hover {
+    background-color: #ff5722; /* Darker accent color for hover */
+  }
+  
+  /* Main content area styles */
+  .content-area {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: #1f1f1f; /* Dark background to match header */
+  }
+  
+  /* Add more spacing for the content in dark mode */
+  .custom-table {
+    border-radius: 12px; /* Rounded edges for the table */
+    overflow: hidden;
+    background-color: #2f2f2f;
+  }
+  
+  .custom-table .p-table-header {
+    background-color: #1f1f1f;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .custom-table .p-button {
+    border-radius: 50%;
+  }
+  
+  .custom-table .p-paginator {
+    background-color: #1f1f1f;
+    color: #fff;
+  }
+  
+  .custom-table .pi-sort-amount-up,
+  .custom-table .pi-sort-amount-down {
+    color: #ff9800;
+  }
+  
+  .custom-table .expanded-row {
+    background-color: #333;
+    color: #fff;
+  }
+  

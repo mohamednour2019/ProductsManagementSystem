@@ -29,18 +29,10 @@ builder.Services.AddDbContext<AppDatabaseContext>(options =>
 builder.Services.AddAutoMapper(typeof(ProductProfile));
 builder.Services.AddScoped<IUnitOfWork, AppDatabaseContext>();
 builder.Services.RegistrRepositories(typeof(ProductRepository).Assembly);
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyOrigin() 
-              .AllowAnyHeader()  
-              .AllowAnyMethod();
-    });
-});
+builder.Services.AddCors();
 
 var app = builder.Build();
-app.UseGlobalExceptionHandleMiddleware();//global exception middleware
+//app.UseGlobalExceptionHandleMiddleware();//global exception middleware
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -48,7 +40,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCors("AllowedOrigin");
+app.UseCors(x => x
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
 // Enable routing
 app.UseRouting();
 
@@ -64,16 +59,15 @@ productApi.MapGet("", async (long id, IMediator mediator) =>
 });
 
 // Get list
-productApi.MapPost("/List", async (SearchProductDto searchProductDto, IMediator mediator) =>
+productApi.MapPost("/list", async (SearchProductDto searchProductDto, IMediator mediator) =>
 {
     var result = await mediator.Send(searchProductDto);
     return Results.Ok(result);
 });
 
 // Edit product
-productApi.MapPatch("", async (long id, EditProductCommand editProductCommand, IMediator mediator) =>
+productApi.MapPut("", async (EditProductCommand editProductCommand, IMediator mediator) =>
 {
-    editProductCommand.Id = id; // Set the id if needed for the Edit command
     var result = await mediator.Send(editProductCommand);
     return Results.Ok(result);
 });

@@ -1,0 +1,65 @@
+.custom-table {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #2f2f2f;
+    color: #fff;
+  }
+  
+  .custom-table .p-table-header {
+    background-color: #1f1f1f;
+    color: #fff;
+  }
+  
+  .custom-table .p-table-footer {
+    background-color: #1f1f1f;
+    color: #fff;
+  }
+  
+  .custom-table .p-button {
+    border-radius: 50%;
+  }
+  
+  .custom-table .p-paginator {
+    background-color: #1f1f1f;
+    color: #fff;
+  }
+  
+  .custom-table .pi {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .custom-table .pi-sort-amount-up,
+  .custom-table .pi-sort-amount-down {
+    color: #ff9800;
+  }
+  
+  .custom-table .expanded-row {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .custom-table .p-button-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+
+  /* Add more margin-bottom to the container */
+.p-d-flex {
+    margin-bottom: 2rem; /* Adjust this value as needed */
+  }
+
+  input[pInputText] {
+    border-radius: 4px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+  
+  .p-d-flex {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
