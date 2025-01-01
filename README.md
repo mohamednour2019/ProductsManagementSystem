@@ -12,12 +12,12 @@ This guide will help you get the **Product Management System** up and running, b
     Example:
     ```json
     {
-      "ConnectionStrings": {
-        "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=ProductManagementSystem.Dev;Trusted_Connection=True;"
+        "ConnectionStrings": {
+            "Default": "server=YourServer;Database=ProductManagementSystem.Dev;TrustServerCertificate=True;Integrated Security=True"
       }
     }
     ```
-3. Open the **Package Manager Console** in Visual Studio (or use the terminal for .NET Core) and run the following command to apply migrations and set up the database:
+3. Open the **Package Manager Console** in Visual Studio (or use the terminal for .NET Core) and choose infrastructure application and run the following command to apply migrations and set up the database:
     ```bash
     Update-Database
     ```
